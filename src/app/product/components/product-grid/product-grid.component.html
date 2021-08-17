@@ -1,0 +1,40 @@
+<div class="row banner-aligned">
+  <div class="col-12 container">
+    <div class="banner">
+      <p>Awesome Banner Placeholder!</p>
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="gridFormattedProducts$ | async as gridFormattedProducts">
+  <div class="row search-aligned">
+    <div class="col-5">
+      <input
+        [formControl]="searchInput"
+        type="text"
+        placeholder="Search Products..."
+      />
+    </div>
+  </div>
+  <ng-container *ngFor="let products of gridFormattedProducts">
+    <div class="row">
+      <ng-container *ngFor="let singleProduct of products">
+        <div class="col-4">
+          <app-product
+            [singleProduct]="singleProduct"
+            [isAdminLoggedIn]="!!(isAdminLogin$ | async)"
+            [isUserLoggedIn]="
+              !!((isCustomerLogin$ | async) || (isAdminLogin$ | async))
+            "
+            (addToCartClick)="addToCart($event)"
+            (deleteProductClick)="deleteProduct($event)"
+          ></app-product>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+
+  <div class="pagination col-12">
+    <a (click)="pageDown()">&laquo;</a>
+    <a (click)="pageUp()">&raquo;</a>
+  </div>
+</ng-container>

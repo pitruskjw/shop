@@ -1,0 +1,103 @@
+<div class="col-12">
+  <form [formGroup]="formGroup" class="col-s-12 col-4 center-offset">
+    <div class="row">
+      <div class="col-12">
+        <span class="col-12">Name</span>
+        <input
+          type="text"
+          class="col-12"
+          name="name"
+          formControlName="name"
+          [class.error]="
+            this.formGroup.controls['name'].invalid &&
+            (this.formGroup.controls['name'].dirty || showValidationErrors)
+          "
+        />
+        <p
+          class="error"
+          *ngIf="
+            this.formGroup.controls['name'].invalid &&
+            (this.formGroup.controls['name'].dirty || showValidationErrors)
+          "
+        >
+          Name is invalid!
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <span class="col-12">Description</span>
+        <textarea
+          class="col-12"
+          name="description"
+          formControlName="description"
+          rows="4"
+          [class.error]="
+            this.formGroup.controls['description'].invalid &&
+            (this.formGroup.controls['description'].dirty ||
+              showValidationErrors)
+          "
+        ></textarea>
+        <p
+          class="error"
+          *ngIf="
+            this.formGroup.controls['description'].invalid &&
+            (this.formGroup.controls['description'].dirty ||
+              showValidationErrors)
+          "
+        >
+          Description is invalid!
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-s-6">
+        <span class="col-s-12">Price</span>
+        <input
+          type="text"
+          class="col-s-12"
+          name="price"
+          formControlName="price"
+          [class.error]="
+            this.formGroup.controls['price'].invalid &&
+            (this.formGroup.controls['price'].dirty || showValidationErrors)
+          "
+        />
+        <p
+          class="error"
+          *ngIf="
+            this.formGroup.controls['price'].invalid &&
+            (this.formGroup.controls['price'].dirty || showValidationErrors)
+          "
+        >
+          Price is invalid!
+        </p>
+      </div>
+
+      <div class="col-s-6">
+        <span class="col-s-12">Discount</span>
+        <input
+          type="text"
+          class="col-s-12"
+          name="discount"
+          formControlName="discount"
+          [class.error]="
+            this.formGroup.controls['discount'].invalid &&
+            (this.formGroup.controls['discount'].dirty || showValidationErrors)
+          "
+        />
+        <p
+          class="error"
+          *ngIf="
+            this.formGroup.controls['discount'].invalid &&
+            (this.formGroup.controls['discount'].dirty || showValidationErrors)
+          "
+        >
+          Discount is invalid!
+        </p>
+      </div>
+    </div>
+    <div class="col-12"><button (click)="saveProduct()">save</button></div>
+  </form>
+</div>

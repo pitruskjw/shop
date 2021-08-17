@@ -1,0 +1,8 @@
+<div class="col-8">
+  <app-product-grid></app-product-grid>
+</div>
+<div class="col-4">
+  <app-cart
+    *ngIf="!!((isCustomerLogin$ | async) || (isAdminLogin$ | async))"
+  ></app-cart>
+</div>

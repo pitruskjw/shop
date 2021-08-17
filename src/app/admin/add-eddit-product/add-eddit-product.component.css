@@ -1,0 +1,55 @@
+p.error {
+  color: red;
+}
+
+input[type="text"].error,
+textarea.error {
+  border-color: red;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+}
+
+textarea {
+  resize: none;
+}
+
+span {
+  padding-left: 0;
+  padding-bottom: 5px;
+}
+
+.center-offset {
+  margin: 0px 33.33%;
+}
+
+button {
+  float: right;
+  color: black;
+  background-color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin-bottom: 5px;
+}
+
+button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+form {
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0 10px;
+}

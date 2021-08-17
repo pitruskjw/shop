@@ -1,0 +1,67 @@
+.pagination {
+  text-align: center;
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+}
+
+.pagination a {
+  margin: 10px;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type="text"]:focus {
+  width: 100%;
+}
+
+.container {
+  height: 35vh;
+  position: relative;
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.banner {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.banner > p {
+  font-size: 1.45em;
+  font-weight: 700;
+}
+
+.banner-aligned {
+  margin-left: 2vw;
+}
+
+.search-aligned {
+  margin-left: 0.9vw;
+}

@@ -1,0 +1,38 @@
+<div class="navbar row">
+  <ul>
+    <li>
+      <a
+        *ngIf="(isCustomerLogin$ | async) || (isAdminLogin$ | async)"
+        href="#"
+        (click)="logout()"
+        >Logout</a
+      >
+    </li>
+    <li>
+      <a
+        *ngIf="isAdminLogin$ | async"
+        routerLinkActive="hide"
+        routerLink="/admin"
+        >Add Product</a
+      >
+    </li>
+    <li>
+      <a
+        *ngIf="!((isCustomerLogin$ | async) || (isAdminLogin$ | async))"
+        href="#"
+        (click)="loginCustomer()"
+      >
+        Customer
+      </a>
+    </li>
+    <li>
+      <a
+        *ngIf="!((isCustomerLogin$ | async) || (isAdminLogin$ | async))"
+        href="#"
+        (click)="loginAdmin()"
+        >Admin</a
+      >
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

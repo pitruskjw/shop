@@ -1,0 +1,48 @@
+table {
+  width: 100%;
+}
+td {
+  padding: 10px 0px;
+}
+
+div.cart-table {
+  height: 65vh;
+  overflow-y: auto;
+}
+
+.cart-table::-webkit-scrollbar {
+  width: 20px;
+}
+
+.cart-table::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.cart-table::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+  background-color: black;
+}
+.cart-wrapper {
+  height: 150vh;
+}
+.cart {
+  box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px 0px, rgb(0 0 0 / 8%) 0px 0px 2px 1px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  height: 85vh;
+  padding: 0 10px;
+  position: sticky;
+  top: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+td:nth-child(2n),
+td:nth-child(3n) {
+  text-align: right;
+}

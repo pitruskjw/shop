@@ -1,0 +1,18 @@
+<div class="col-12 product">
+  <img src="{{ singleProduct.defaultImage }}" />
+  <div>
+    <div class="name">{{ singleProduct.name }}</div>
+    <div class="price">{{ singleProduct.price | currency }}</div>
+    <div class="row icons">
+      <span *ngIf="isAdminLoggedIn" routerLink="/admin/{{ singleProduct.id }}"
+        ><i class="fas fa-edit"></i
+      ></span>
+      <span *ngIf="isAdminLoggedIn" (click)="deleteProduct(singleProduct.id)">
+        <i class="fas fa-trash"></i
+      ></span>
+      <span *ngIf="isUserLoggedIn" (click)="addToCart(singleProduct.id)"
+        ><i class="fas fa-cart-plus"></i
+      ></span>
+    </div>
+  </div>
+</div>
